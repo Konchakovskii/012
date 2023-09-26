@@ -21,18 +21,18 @@ if (personalMovieDB.count < 10) {
     alert("error!");
 }
 
-for (let i = 0; i < 2; i++) {
-    const x = prompt("What is your latest movie watched?");
-    const y = prompt("How do you rate it?");
-    if (x != null && y != null && x != '' && y != '' && x.length < 50) {
-        personalMovieDB.movies[x] = y;
-        console.log('Done');
-    } else {
-        console.log ("error");
-        i--;
-    }
+// for (let i = 0; i < 2; i++) {
+//     const x = prompt("What is your latest movie watched?");
+//     const y = prompt("How do you rate it?");
+//     if (x != null && y != null && x != '' && y != '' && x.length < 50) {
+//         personalMovieDB.movies[x] = y;
+//         console.log('Done');
+//     } else {
+//         console.log ("error");
+//         i--;
+//     }
     
-}
+// }
 
 // let i = 0;
 // do {
@@ -47,6 +47,17 @@ for (let i = 0; i < 2; i++) {
 //         i = i;
 //     }
 // } while (i < 2);
-
-
+let i = 0;
+while (i < 2) {
+            const x = prompt("What is your latest movie watched?");
+            const y = prompt("How do you rate it?");
+            if (x != null && y != null && x != '' && y != '' && x.length < 50) {
+                personalMovieDB.movies[x] = y;
+                console.log('Done');
+                i++;
+            } else {
+                console.log ("error");
+                i = i;
+}
+}
 console.log(personalMovieDB);
